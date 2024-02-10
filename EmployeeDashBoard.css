@@ -1,0 +1,299 @@
+@charset "ISO-8859-1";
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background:rgb(44, 44, 216);
+  padding: 15px;
+  z-index: 99;
+}
+#logoComp img{
+    margin-left: 2vw;
+    width: 10vw;
+    height: 15vh;
+}
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 15px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  color: black;
+  font-weight: bolder;
+  background:#fff;
+  padding-right: 10px;
+  transition: 0.4s;
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background:rgb(44, 44, 216);
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+  /* overflow-x: hidden; */
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background:rgb(44, 44, 216);
+  cursor: pointer;
+  box-shadow: 3px 3px 10px black;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  display: flex;
+  height: 200vh;
+  z-index: 100;
+  background: cadetblue;
+}
+#icon{
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+}
+button{
+  font-size: 30px;
+  border-radius: 47%;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+}
+.profile{
+  font-size: 1px;
+  float: left;
+}
+.onlineMemb{
+    float: right;
+}
+.onlineUser{
+    margin-left: 10px;
+}
+.onlineUser i{
+    font-size: 30px;
+}
+.online{
+    display: flex;
+    background:black;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#bell{
+    position: fixed;
+    left: 93vw;
+    top: 2.5vh;
+}
+.greet{
+  font-family: "Poppins", sans-serif;
+  width: 80vw;
+  height: 80px;
+  position: relative;
+  background: whitesmoke;
+  top: 70px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.greet .prof{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: green;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  font-size: 30px;
+  color: white;
+}
+.prof pre{
+  position: relative;
+  top:5px;
+}
+.greet label{
+  position: relative;
+  left: 80px;
+  top: -25px;
+  font-size: 20px;
+}
+#date{
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  left: 73vw;
+}
+
+.overview{
+    width: 96%;
+    height: 15vh;
+    background: white;
+    position: absolute;
+    margin: 15px;
+    top: 20vh;
+    left: 10px;
+    border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.overview .task-1,.overview .task-3,.overview .task-2{
+    width:25vw;
+    height: 10vh;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overview .task-1{
+    border-left: 5px violet solid;
+}
+.overview .task-2{
+    position: relative;
+    left: 26vw;
+    top:-10vh;
+    border-left: 5px greenyellow solid;
+}.overview .task-3{
+    position: relative;
+    left: 52vw;
+    top: -20vh;
+    border-left: 5px red solid;
+}
+.overview label{
+    font-size: 25px;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+}
+.overview-p{
+    font-size: 50px;
+    position: relative;
+    left: -60px;
+}
+.overview pre{
+    font-size: 20px;
+}
+
+.task-overview{
+    width: 74%;
+    height: 50vh;
+    background: whitesmoke;
+    position: absolute;
+    top: 40vh;
+    margin: 15px;
+    left: 10px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.task-overview pre{
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+  left: 50px;
+}
+.task-overview table{
+  position: relative;
+  top: 40px;
+  left: 30px;
+  padding: 20px;
+ border-collapse: collapse;
+ border: 1px solid black;
+}
+.task-overview table tr{
+  padding: 20px;
+}
+.task-overview table #tr1{
+  background: rgb(151, 215, 240);
+}
+.task-overview table td {
+  padding: 20px 100px 20px 20px;
+  border: 1px solid black;
+}
+.task-overview table td p{
+  font-size: 20px;
+}
